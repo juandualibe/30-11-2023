@@ -135,8 +135,9 @@ section img:hover {
 #title {
     position: absolute;
     left: 46%;
+    top: 22vh;
+    color: rgb(177, 175, 177);
     
-    margin-top: -5vh;
 }
 
 footer {
@@ -210,6 +211,16 @@ span {
     transform: scale(1.5);
 }
 
+/*Header*/
+
+header {
+    background-image: url(./img/logo-cine_23-2147503279.avif);
+    background-size: contain; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el elemento */
+    color: rgb(18, 17, 17); /* Color del texto para que sea legible en la imagen de fondo */
+    text-align: center;
+    padding: 100px; /* Ajusta el relleno según sea necesario */
+}
 
 
 
