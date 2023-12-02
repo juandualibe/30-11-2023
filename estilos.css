@@ -7,6 +7,9 @@ nav {
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
 }
 
 ul li {
@@ -15,6 +18,8 @@ ul li {
 
 .menu-desplegable {
     display: flex;
+    position: relative;
+    flex-wrap: wrap;
 }
 
 .menu-desplegable li a {
@@ -55,49 +60,65 @@ ul li {
 .container {
     display: flex;
     position: relative;
-    left: 25%;
+    flex-direction: row;
+    left: 15vw;
     top: 0;
     flex-wrap: nowrap;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 22vw;
 }
 
 input {
+    position: relative;
     background-color: rgb(244, 163, 163);
     border: 3px black solid;
     border-radius: 5px;
-    width: 250px;
+    width: 25vw;
     height: 38px;
     bottom: 0;
     top: 0;
     right: 0;
-
+    margin: 0;
+    outline: none;
 }
 
 button {
     background-color: red;
     width: 40px;
     height: 38px;
-    border-radius: 5px;
+    border-radius: 5px;  
 
 }
 
 /*Slider*/
 
 section {
-    display: flex;
-    flex-direction: row;
+    
+    position: relative;
+    margin-top: 220px;
+    display: flex;    
     width: 100%;
-    height: 450px;
+    
     overflow: hidden;
+    
 }
 .carrusel {
     display: flex;
     flex-direction: row;
+    height: 100em;
+    width: 100%;
+    position: relative;
+    left: 20%;
 }
-section img {
+
+
+section img {  
+    align-content: center;
+    margin-top: 50px;
+    width: 150px;
+    height: 450px;
     
-    width: 200px;
-    height: 250px;
-    flex-grow: 1;
     object-fit: cover;
     opacity: .8;
     transition: .5s ease;
@@ -105,7 +126,90 @@ section img {
 
 section img:hover {
     cursor: cell;
-    width: 300px;
+    transform: scale(1);  
+    width: 400px;
     opacity: 1;
     filter: contrast(120%);
 }
+
+#title {
+    position: absolute;
+    left: 46%;
+    
+    margin-top: -5vh;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    position: absolute;    
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.653);
+}
+span {
+    position: relative;
+    top: 25%;
+}
+
+/*menu hamburguesa*/
+
+.menuhamburguesa {
+    display: flex;
+    position: absolute;
+    left: 80vw;
+    top: 10px;    
+    flex-wrap: wrap;
+    margin-left: 12vw;   
+    
+}
+
+.menuhamburguesa ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menuhamburguesa li {
+    position: relative;
+}
+
+.menuhamburguesa a {
+    text-decoration: none;
+    color: white;
+}
+.menuhamburguesa ul ul {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 13, 13, 0.662);
+    left: 0;
+    padding: 5px;
+    top: 25px;
+}
+
+.menuhamburguesa li:hover ul {
+    display: block;
+}
+
+.menuhamburguesa li ul li a{
+    display: block;
+    transition: all 0.3s;
+}
+
+.menuhamburguesa li ul li a:hover {
+    background-color: rgba(255, 13, 13, 0.662);
+    transform: scale(0.9);
+}
+
+.menuhamburguesa i {
+    color: black;
+    font-size: larger;
+}
+
+.menuhamburguesa i:hover {
+    transform: scale(1.5);
+}
+
+
+
+
